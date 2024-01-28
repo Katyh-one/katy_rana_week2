@@ -1,4 +1,4 @@
-import getpass
+from getpass import getpass
 # the operand of pin needs to be a string because the output of input is converting the users input to string
 # defined the correct pin with string to match output of input as string
 pin = '1234'
@@ -23,11 +23,11 @@ for attempts in range(1, 4):
     # conditional statement
     # if pin given by user equals value of pin stored in variable below if code runs
     # statement returns true
-    if supplied_pin == pin:
+    if supplied_pin in pin:
         print('Have lots of money')
         # added the break to stop the loop continuing to ask for pin
         break
-    elif supplied_pin != pin and attempts < 3:
+    elif supplied_pin not in pin and attempts < 3:
         # chaining comparison - add value of count to value of attempts
         # attempts += count
         # assign value of attempts to new variable
