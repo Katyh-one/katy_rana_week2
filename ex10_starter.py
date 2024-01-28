@@ -47,7 +47,6 @@ print(base)
 # Exercise 10
 
 # get the directory
-home = os.environ['HOMEPATH']
 
 
 # construct a portable wildcard pattern using ospathjoin
@@ -75,3 +74,17 @@ for file_path in files_found:
     if file_size > 0:
         print('These are how big in bytes the files are that are over 0:', str(file_path), str(file_size))
 
+
+# Another practice
+home = os.environ['HOMEPATH']
+print(home)
+
+directory = home + '/Documents'
+wildcard_pattern = '*.txt'
+file_path = os.path.join(directory, wildcard_pattern)
+print(file_path)
+files_found = glob.glob(file_path)
+print('Here are the found files: ', files_found)
+for file_path in files_found:
+    file_size = os.path.getsize(file_path)
+    print('These are how big in bytes the files are:', str(file_path), str(file_size))
