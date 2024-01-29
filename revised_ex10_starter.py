@@ -20,6 +20,7 @@ print('Here are the found files: ', files_found)
 # TODO: use os.path.getsize to find each file's size
 for pattern in files_found:
     file_size = os.path.getsize(pattern)
+    # when printing in a string the outputs need to be converted to strings
     print('These are how big in bytes the files are:', str(pattern), str(file_size))
 # TODO: Add a test to only display files that are not zero length
 # loop is iterating over the found files located using glob and then only showing if they have byte size over 0
