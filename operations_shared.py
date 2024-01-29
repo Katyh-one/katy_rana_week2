@@ -18,3 +18,12 @@ print(len(var))
 # victoria? will the 'any' function run only till it finds a number or will it check every character
 includes_digit = any(character.isdecimal() for character in var)
 print(includes_digit)
+
+# printed out all characters and whether they were numeric or not to help understand
+# using the for loop to iterate over the characters and where one is numeric, output the value and the string
+for char in var:
+    if char.isdecimal():
+        print(char, ' is a numeric value')
+    else:
+        print(char, ' is not a numeric')
+print(type(var))

@@ -10,6 +10,7 @@ x = 0.5
 yo = 1
 # Theta calculation based on example
 theta = degrees * (pi / 180)
+# could use math.radians instead - theta=math.radians(degrees)
 
 # Variable created to multiply g by x squared. Using the math.pow function to square x Can use **2 instead of math.pow
 gx_squared = g * math.pow(x, 2)
